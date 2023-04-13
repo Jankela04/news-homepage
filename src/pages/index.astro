@@ -1,7 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Navbar } from "../components/Navbar";
 ---
 
 <Layout title="News Homepage">
-    <p class="">Hello</p>
+    <div class="mx-auto max-w-[80vw]">
+        <Navbar client:load />
+    </div>
 </Layout>
