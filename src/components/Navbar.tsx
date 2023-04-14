@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 export const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
-
     const toggleNavbar = () => {
         setIsNavOpen((prev) => !prev);
     };
@@ -30,7 +29,7 @@ export const Navbar = () => {
             <a href="/">
                 <img src={logo} alt="Logo" />
             </a>
-            <button className="z-10 md:hidden" onClick={toggleNavbar}>
+            <button className="z-20 md:hidden" onClick={toggleNavbar}>
                 {isNavOpen ? (
                     <img src={closeMenu} alt="Close Menu" />
                 ) : (
@@ -40,12 +39,18 @@ export const Navbar = () => {
             <div
                 className={
                     isNavOpen
-                        ? "absolute right-0 top-0 flex h-screen w-2/3 flex-col gap-5 pt-48 md:flex"
+                        ? "absolute right-0 top-0 z-10 flex h-screen w-2/3 flex-col gap-5 pt-48 md:flex"
                         : "hidden gap-8 md:flex"
                 }
             >
                 <Links />
             </div>
+            {isNavOpen && (
+                <div
+                    className="fixed left-0 top-0 z-10 h-screen w-1/3 bg-black opacity-50"
+                    onClick={toggleNavbar}
+                ></div>
+            )}
         </nav>
     );
 };
