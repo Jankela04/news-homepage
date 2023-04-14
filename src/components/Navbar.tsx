@@ -39,7 +39,7 @@ export const Navbar = () => {
             <div
                 className={
                     isNavOpen
-                        ? "absolute right-0 top-0 z-10 flex h-screen w-2/3 flex-col gap-5 pt-48 md:flex"
+                        ? "absolute right-0 top-0 z-10 flex h-screen w-2/3 flex-col gap-5 bg-white pt-48 md:flex"
                         : "hidden gap-8 md:flex"
                 }
             >
@@ -47,7 +47,7 @@ export const Navbar = () => {
             </div>
             {isNavOpen && (
                 <div
-                    className="fixed left-0 top-0 z-10 h-screen w-1/3 bg-black opacity-50"
+                    className="fixed left-0 top-0 h-screen w-2/3 bg-black opacity-50"
                     onClick={toggleNavbar}
                 ></div>
             )}
