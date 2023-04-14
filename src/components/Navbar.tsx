@@ -4,7 +4,7 @@ import closeMenu from "/icon-menu-close.svg";
 
 import { useEffect, useState } from "react";
 
-export const Navbar = () => {
+const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleNavbar = () => {
         setIsNavOpen((prev) => !prev);
@@ -54,6 +54,8 @@ export const Navbar = () => {
         </nav>
     );
 };
+
+export default Navbar;
 
 const Links = () => {
     return (
