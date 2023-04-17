@@ -1,6 +1,6 @@
 const News = () => {
     return (
-        <div className="bg-neutral-darkBlue p-6">
+        <div className="my-24 bg-neutral-darkBlue p-6 sm:my-0">
             <h2 className="pb-10 text-5xl font-bold text-primary-orange">
                 New
             </h2>
